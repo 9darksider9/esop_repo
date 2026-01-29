@@ -69,10 +69,6 @@ independently.
 **Telemetry** provides continuous validation that reality matches intent.
 Compliance is periodic; telemetry is continuous.
 
-The `/MAPPINGS` directory will contain mappings from principles to
-control frameworks. The `/COMPLIANCE` directory contains framework-
-specific validation scaffolding.
-
 ## Operational Usage
 
 ### For Security Architecture
@@ -108,61 +104,122 @@ violation trends indicate operational risk.
 ## Repository Structure
 
 ```
-/PRINCIPLES/     Canonical principle definitions
-/COMPLIANCE/     Framework-specific validation scaffolding
-/MAPPINGS/       Principle-to-control-framework mappings
-/GOVERNANCE.md   Change control and versioning policy
-/ROADMAP.md      Planned expansion areas
+/PRINCIPLES/
+├── A-visibility/      Visibility, Telemetry, and Truth (P-001 to P-012)
+├── B-identity/        Identity, Authorization, and Trust (P-013 to P-024)
+├── C-automation/      Automation, Scale, and Human Limits (P-025 to P-034)
+├── D-resilience/      Resilience, Failure, and Blast Radius (P-035 to P-044)
+├── E-engineering/     Engineering Discipline and Evidence (P-045 to P-054)
+├── F-ethics/          Ethics, Data Stewardship, and Power (P-055 to P-061)
+└── EXTENDED/          Non-canonical supplementary principles
+
+/COMPLIANCE/           Framework-specific validation scaffolding
+/MAPPINGS/             Principle-to-control-framework mappings
+/GOVERNANCE.md         Change control and versioning policy
+/ROADMAP.md            Planned expansion areas
 ```
 
-## Principle Index
+---
 
-### Visibility and Telemetry (01)
+## Canonical Principle Index (61 Principles)
+
+### A. Visibility, Telemetry, and Truth (P-001 to P-012)
+
 - P-001 Telemetry Required
-- P-002 No Missing Data
-- P-003 Telemetry Integrity
+- P-002 Telemetry Implies Trust
+- P-003 Telemetry Quality
+- P-004 Forensic Retention
+- P-005 Data Lineage
+- P-006 Schema Drift Defect
+- P-007 Completeness Over Precision
+- P-008 Collection Gaps Alert
+- P-009 Fail Open Collection
+- P-010 Data Freshness
+- P-011 Observable Decisions
+- P-012 Unobservable Untrusted
 
-### Identity and Access (02)
-- P-010 Attributable Identity
-- P-011 Privilege Decay
-- P-012 Least Privilege
-- P-013 Authentication Boundary
+### B. Identity, Authorization, and Trust (P-013 to P-024)
 
-### Automation and Scale (03)
-- P-020 Automation Default
-- P-021 Idempotent Operations
-- P-022 Audit Trail Mandatory
+- P-013 Attributable Identity
+- P-014 Anonymous Access Defect
+- P-015 Machine Identity Risk
+- P-016 Credential Hygiene
+- P-017 Standing Privilege Debt
+- P-018 Privilege Decay
+- P-019 Explainable Authorization
+- P-020 Identity Resilience
+- P-021 Explicit Trust Boundaries
+- P-022 Cross-Boundary Telemetry
+- P-023 Continuous Validation
+- P-024 Workload-Based Privilege
 
-### Resilience and Recovery (04)
-- P-030 Assume Compromise
-- P-031 Recovery Tested
-- P-032 Blast Radius Containment
+### C. Automation, Scale, and Human Limits (P-025 to P-034)
 
-### Engineering Discipline (05)
-- P-040 Metrics Required
-- P-041 Testability
-- P-042 Secure Defaults
+- P-025 Eliminate Manual Execution
+- P-026 Intent and Execution Separation
+- P-027 Automate Repetition
+- P-028 Observable Automation
+- P-029 AI Guardrails
+- P-030 Automation Failure Safety
+- P-031 Human Toil Signal
+- P-032 Complexity Compounds Risk
+- P-033 Reliability Over Cleverness
+- P-034 Understanding Over Action
 
-### Ethics and Governance (06)
-- P-050 Data Non-Retaliation
-- P-051 Proportionate Response
+### D. Resilience, Failure, and Blast Radius (P-035 to P-044)
 
-### Asset Lifecycle (07)
-- P-060 Asset Inventory
-- P-061 Decommissioning Required
-- P-062 Dependency Tracking
+- P-035 Assume Compromise
+- P-036 Blast Radius Measurable
+- P-037 Lateral Movement Visible
+- P-038 Shared Fate Justification
+- P-039 Recovery Exercised
+- P-040 Detection Over Prevention
+- P-041 Containment Automatable
+- P-042 Data Integrity Incidents
+- P-043 Recovery Objectives Validated
+- P-044 Silent Failure Unacceptable
 
-### Change Control (08)
-- P-070 Change Authorization
-- P-071 Rollback Capability
-- P-072 Change Validation
+### E. Engineering Discipline and Evidence (P-045 to P-054)
 
-### Configuration Integrity (09)
-- P-080 Configuration as Code
-- P-081 Drift Detection
-- P-082 Baseline Enforcement
+- P-045 Controls Declare Purpose
+- P-046 Metrics Required
+- P-047 Evidence Over Opinion
+- P-048 Assumptions Tested
+- P-049 Drift Detection
+- P-050 Configuration Is Code
+- P-051 Change Attribution
+- P-052 Repeat Failures Systemic
+- P-053 Security Debt Compounds
+- P-054 Untestable Untrustworthy
 
-### Third-Party Trust (10)
-- P-090 Vendor Assessment
-- P-091 Supply Chain Verification
-- P-092 Boundary Enforcement
+### F. Ethics, Data Stewardship, and Power (P-055 to P-061)
+
+- P-055 Data Collection Justified
+- P-056 Data Access Auditable
+- P-057 Data Minimization
+- P-058 Transparency
+- P-059 Power Asymmetry
+- P-060 External Defensibility
+- P-061 Non-Punitive Telemetry
+
+---
+
+## Extended Principles (Non-Canonical)
+
+The following principles supplement the canonical set. They address
+domains not covered by the canonical 61 or provide additional depth
+in specific areas.
+
+- P-EXT-001 Least Privilege
+- P-EXT-002 Audit Trail Mandatory
+- P-EXT-003 Secure Defaults
+- P-EXT-004 Proportionate Response
+- P-060 Asset Inventory (Extended)
+- P-061 Decommissioning Required (Extended)
+- P-062 Dependency Tracking (Extended)
+- P-071 Rollback Capability (Extended)
+- P-072 Change Validation (Extended)
+- P-082 Baseline Enforcement (Extended)
+- P-090 Vendor Assessment (Extended)
+- P-091 Supply Chain Verification (Extended)
+- P-092 Boundary Enforcement (Extended)
