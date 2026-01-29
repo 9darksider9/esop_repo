@@ -223,3 +223,7 @@ in specific areas.
 - P-090 Vendor Assessment (Extended)
 - P-091 Supply Chain Verification (Extended)
 - P-092 Boundary Enforcement (Extended)
+- P-093 Baselines Are Required (Extended)
+- P-094 Drift Is a Security Signal (Extended)
+- P-095 Vulnerabilities Are Contextual (Extended)
+- P-096 Unmanaged Vulnerabilities Are Defects (Extended)
