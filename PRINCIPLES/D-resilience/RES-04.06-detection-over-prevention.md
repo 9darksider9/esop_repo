@@ -1,0 +1,48 @@
+# RES-04.06 — Detection Over Prevention
+
+## Statement
+
+Time-to-detect matters more than time-to-prevent.
+
+## Reasoning
+
+Prevention will eventually fail. When it does, the duration of
+undetected compromise determines the damage. Reducing detection time
+limits attacker dwell time, constrains blast radius, and enables
+faster recovery. Investing only in prevention without detection
+guarantees extended compromise.
+
+Prevention is valuable; detection is essential.
+
+## Justification
+
+Industry data consistently shows that breaches are detected months
+after initial compromise. During this dwell time, attackers establish
+persistence, exfiltrate data, and expand access. Organizations that
+prioritize detection reduce dwell time and limit damage even when
+prevention fails.
+
+## Operational Uses
+
+- Detection coverage metrics as primary security indicators.
+- Mean time to detect as key performance metric.
+- Investment prioritization toward detection capabilities.
+- Detection-focused architecture reviews.
+- Assume-breach detection scenarios in threat modeling.
+
+## Misuse / Abuse Risks
+
+- Underinvesting in prevention because detection exists.
+- Detection fatigue from high false positive rates.
+- Detection metrics gamed without improving actual detection.
+- Detection investment without response capability investment.
+
+## Related Principles
+
+- RES-04.01 Assume Compromise
+- RES-04.07 Containment Automatable
+- RES-04.10 Silent Failure Unacceptable
+
+## Compliance Touchpoints
+
+Placeholder

@@ -16,6 +16,33 @@ Telemetry validates reality.
 
 ---
 
+## Principle Identifier Format
+
+ESOP uses domain-scoped identifiers in the format:
+
+```
+<DOMAIN>-<DOMAIN_ID>.<PRINCIPLE_ID>
+```
+
+**Examples:**
+- `VIS-01.01` — Telemetry Required
+- `RES-04.05` — Recovery Exercised
+- `ENG-05.11` — Secure Defaults
+
+**Domain Prefixes:**
+- `VIS-01` — Visibility, Telemetry, and Truth
+- `IDN-02` — Identity, Authorization, and Trust
+- `AUT-03` — Automation, Scale, and Human Limits
+- `RES-04` — Resilience, Failure, and Blast Radius
+- `ENG-05` — Engineering Discipline and Evidence
+- `ETH-06` — Ethics, Data Stewardship, and Power
+
+**Immutability Rule:** Once assigned, principle IDs are immutable. They
+must never be reused, renumbered, or repurposed. See `docs/id-mapping.md`
+for the complete mapping from legacy `P-###` identifiers.
+
+---
+
 ## Purpose and Scope
 
 ESOP establishes authoritative security principles for enterprise
@@ -105,125 +132,143 @@ violation trends indicate operational risk.
 
 ```
 /PRINCIPLES/
-├── A-visibility/      Visibility, Telemetry, and Truth (P-001 to P-012)
-├── B-identity/        Identity, Authorization, and Trust (P-013 to P-024)
-├── C-automation/      Automation, Scale, and Human Limits (P-025 to P-034)
-├── D-resilience/      Resilience, Failure, and Blast Radius (P-035 to P-044)
-├── E-engineering/     Engineering Discipline and Evidence (P-045 to P-054)
-├── F-ethics/          Ethics, Data Stewardship, and Power (P-055 to P-061)
-└── EXTENDED/          Non-canonical supplementary principles
+├── A-visibility/      Visibility, Telemetry, and Truth (VIS-01)
+├── B-identity/        Identity, Authorization, and Trust (IDN-02)
+├── C-automation/      Automation, Scale, and Human Limits (AUT-03)
+├── D-resilience/      Resilience, Failure, and Blast Radius (RES-04)
+├── E-engineering/     Engineering Discipline and Evidence (ENG-05)
+└── F-ethics/          Ethics, Data Stewardship, and Power (ETH-06)
 
 /COMPLIANCE/           Framework-specific validation scaffolding
 /MAPPINGS/             Principle-to-control-framework mappings
+/docs/                 Documentation including ID mapping
 /GOVERNANCE.md         Change control and versioning policy
 /ROADMAP.md            Planned expansion areas
 ```
 
 ---
 
-## Canonical Principle Index (61 Principles)
+## Principle Index
 
-### A. Visibility, Telemetry, and Truth (P-001 to P-012)
+### VIS-01 — Visibility, Telemetry, and Truth
 
-- P-001 Telemetry Required
-- P-002 Telemetry Implies Trust
-- P-003 Telemetry Quality
-- P-004 Forensic Retention
-- P-005 Data Lineage
-- P-006 Schema Drift Defect
-- P-007 Completeness Over Precision
-- P-008 Collection Gaps Alert
-- P-009 Fail Open Collection
-- P-010 Data Freshness
-- P-011 Observable Decisions
-- P-012 Unobservable Untrusted
+#### Canonical (VIS-01.01 to VIS-01.12)
 
-### B. Identity, Authorization, and Trust (P-013 to P-024)
+- VIS-01.01 Telemetry Required
+- VIS-01.02 Telemetry Implies Trust
+- VIS-01.03 Telemetry Quality
+- VIS-01.04 Forensic Retention
+- VIS-01.05 Data Lineage
+- VIS-01.06 Schema Drift Defect
+- VIS-01.07 Completeness Over Precision
+- VIS-01.08 Collection Gaps Alert
+- VIS-01.09 Fail Open Collection
+- VIS-01.10 Data Freshness
+- VIS-01.11 Observable Decisions
+- VIS-01.12 Unobservable Untrusted
 
-- P-013 Attributable Identity
-- P-014 Anonymous Access Defect
-- P-015 Machine Identity Risk
-- P-016 Credential Hygiene
-- P-017 Standing Privilege Debt
-- P-018 Privilege Decay
-- P-019 Explainable Authorization
-- P-020 Identity Resilience
-- P-021 Explicit Trust Boundaries
-- P-022 Cross-Boundary Telemetry
-- P-023 Continuous Validation
-- P-024 Workload-Based Privilege
+#### Extended (VIS-01.13+)
 
-### C. Automation, Scale, and Human Limits (P-025 to P-034)
+- VIS-01.13 Audit Trail Mandatory
+- VIS-01.14 Asset Inventory
 
-- P-025 Eliminate Manual Execution
-- P-026 Intent and Execution Separation
-- P-027 Automate Repetition
-- P-028 Observable Automation
-- P-029 AI Guardrails
-- P-030 Automation Failure Safety
-- P-031 Human Toil Signal
-- P-032 Complexity Compounds Risk
-- P-033 Reliability Over Cleverness
-- P-034 Understanding Over Action
+### IDN-02 — Identity, Authorization, and Trust
 
-### D. Resilience, Failure, and Blast Radius (P-035 to P-044)
+#### Canonical (IDN-02.01 to IDN-02.12)
 
-- P-035 Assume Compromise
-- P-036 Blast Radius Measurable
-- P-037 Lateral Movement Visible
-- P-038 Shared Fate Justification
-- P-039 Recovery Exercised
-- P-040 Detection Over Prevention
-- P-041 Containment Automatable
-- P-042 Data Integrity Incidents
-- P-043 Recovery Objectives Validated
-- P-044 Silent Failure Unacceptable
+- IDN-02.01 Attributable Identity
+- IDN-02.02 Anonymous Access Defect
+- IDN-02.03 Machine Identity Risk
+- IDN-02.04 Credential Hygiene
+- IDN-02.05 Standing Privilege Debt
+- IDN-02.06 Privilege Decay
+- IDN-02.07 Explainable Authorization
+- IDN-02.08 Identity Resilience
+- IDN-02.09 Explicit Trust Boundaries
+- IDN-02.10 Cross-Boundary Telemetry
+- IDN-02.11 Continuous Validation
+- IDN-02.12 Workload-Based Privilege
 
-### E. Engineering Discipline and Evidence (P-045 to P-054)
+#### Extended (IDN-02.13+)
 
-- P-045 Controls Declare Purpose
-- P-046 Metrics Required
-- P-047 Evidence Over Opinion
-- P-048 Assumptions Tested
-- P-049 Drift Detection
-- P-050 Configuration Is Code
-- P-051 Change Attribution
-- P-052 Repeat Failures Systemic
-- P-053 Security Debt Compounds
-- P-054 Untestable Untrustworthy
+- IDN-02.13 Least Privilege
+- IDN-02.14 Boundary Enforcement
 
-### F. Ethics, Data Stewardship, and Power (P-055 to P-061)
+### AUT-03 — Automation, Scale, and Human Limits
 
-- P-055 Data Collection Justified
-- P-056 Data Access Auditable
-- P-057 Data Minimization
-- P-058 Transparency
-- P-059 Power Asymmetry
-- P-060 External Defensibility
-- P-061 Non-Punitive Telemetry
+#### Canonical (AUT-03.01 to AUT-03.10)
 
----
+- AUT-03.01 Eliminate Manual Execution
+- AUT-03.02 Intent and Execution Separation
+- AUT-03.03 Automate Repetition
+- AUT-03.04 Observable Automation
+- AUT-03.05 AI Guardrails
+- AUT-03.06 Automation Failure Safety
+- AUT-03.07 Human Toil Signal
+- AUT-03.08 Complexity Compounds Risk
+- AUT-03.09 Reliability Over Cleverness
+- AUT-03.10 Understanding Over Action
 
-## Extended Principles (Non-Canonical)
+### RES-04 — Resilience, Failure, and Blast Radius
 
-The following principles supplement the canonical set. They address
-domains not covered by the canonical 61 or provide additional depth
-in specific areas.
+#### Canonical (RES-04.01 to RES-04.10)
 
-- P-EXT-001 Least Privilege
-- P-EXT-002 Audit Trail Mandatory
-- P-EXT-003 Secure Defaults
-- P-EXT-004 Proportionate Response
-- P-060 Asset Inventory (Extended)
-- P-061 Decommissioning Required (Extended)
-- P-062 Dependency Tracking (Extended)
-- P-071 Rollback Capability (Extended)
-- P-072 Change Validation (Extended)
-- P-082 Baseline Enforcement (Extended)
-- P-090 Vendor Assessment (Extended)
-- P-091 Supply Chain Verification (Extended)
-- P-092 Boundary Enforcement (Extended)
-- P-093 Baselines Are Required (Extended)
-- P-094 Drift Is a Security Signal (Extended)
-- P-095 Vulnerabilities Are Contextual (Extended)
-- P-096 Unmanaged Vulnerabilities Are Defects (Extended)
+- RES-04.01 Assume Compromise
+- RES-04.02 Blast Radius Measurable
+- RES-04.03 Lateral Movement Visible
+- RES-04.04 Shared Fate Justification
+- RES-04.05 Recovery Exercised
+- RES-04.06 Detection Over Prevention
+- RES-04.07 Containment Automatable
+- RES-04.08 Data Integrity Incidents
+- RES-04.09 Recovery Objectives Validated
+- RES-04.10 Silent Failure Unacceptable
+
+#### Extended (RES-04.11+)
+
+- RES-04.11 Proportionate Response
+- RES-04.12 Rollback Capability
+- RES-04.13 Vulnerabilities Are Contextual
+
+### ENG-05 — Engineering Discipline and Evidence
+
+#### Canonical (ENG-05.01 to ENG-05.10)
+
+- ENG-05.01 Controls Declare Purpose
+- ENG-05.02 Metrics Required
+- ENG-05.03 Evidence Over Opinion
+- ENG-05.04 Assumptions Tested
+- ENG-05.05 Drift Detection
+- ENG-05.06 Configuration Is Code
+- ENG-05.07 Change Attribution
+- ENG-05.08 Repeat Failures Systemic
+- ENG-05.09 Security Debt Compounds
+- ENG-05.10 Untestable Untrustworthy
+
+#### Extended (ENG-05.11+)
+
+- ENG-05.11 Secure Defaults
+- ENG-05.12 Decommissioning Required
+- ENG-05.13 Dependency Tracking
+- ENG-05.14 Change Validation
+- ENG-05.15 Baseline Enforcement
+- ENG-05.16 Supply Chain Verification
+- ENG-05.17 Baselines Are Required
+- ENG-05.18 Drift Is a Security Signal
+- ENG-05.19 Unmanaged Vulnerabilities Are Defects
+
+### ETH-06 — Ethics, Data Stewardship, and Power
+
+#### Canonical (ETH-06.01 to ETH-06.07)
+
+- ETH-06.01 Data Collection Justified
+- ETH-06.02 Data Access Auditable
+- ETH-06.03 Data Minimization
+- ETH-06.04 Transparency
+- ETH-06.05 Power Asymmetry
+- ETH-06.06 External Defensibility
+- ETH-06.07 Non-Punitive Telemetry
+
+#### Extended (ETH-06.08+)
+
+- ETH-06.08 Vendor Assessment
